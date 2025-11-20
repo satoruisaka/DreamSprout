@@ -2,6 +2,8 @@
 
 DreamSprout transforms a single prompt into a fully illustrated storybook by uing local large language models (via Ollama) and image generation (via Stable Diffusion XL). 
 
+Version 1.0, November 20, 2025
+
 ---
 
 ![Web UI screenshot](DreamSprout_screenshot1.jpg)
@@ -24,6 +26,7 @@ DreamSprout transforms a single prompt into a fully illustrated storybook by uin
 
 ## Project Structure
 
+<pre>
 DreamSproutStoryGenerator/
 ├── config.py               # Model and pipeline configuration
 ├── dreamsprout.py          # Core story/image generation logic
@@ -35,8 +38,7 @@ DreamSproutStoryGenerator/
     ├── form.html
     ├── gallery.html
     └── storybook_template.html
-
-```
+</pre>
 
 ## Requirements
 
@@ -104,4 +106,5 @@ _No copyright on this material._
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
