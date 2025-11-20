@@ -23,7 +23,6 @@ Write a short story (~{CONFIG['pipeline']['target_words']} words) inspired by:
 - Core elements: {', '.join(core_elements)}
 
 Requirements:
-Requirements:
 - 2nd grade level English, emotionally warm; avoid scary or dark themes.
 - Use magical settings, funny characters, and surreal logic.
 - End with a gentle interpretive insight.
@@ -264,4 +263,5 @@ def main():
     print("Images generated:", result["images"])
 
 if __name__ == "__main__":
+
     main()
