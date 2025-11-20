@@ -1,6 +1,8 @@
 # DreamSprout Story Generator
 
-DreamSprout transforms a single prompt into a fully illustrated storybook by uing local large language models (via Ollama) and image generation (via Stable Diffusion XL). 
+**DreamSprout** is a playful and educational Python app that transforms a single prompt into a fully illustrated storybook using local large language models (via Ollama) and image generation (via Stable Diffusion XL).
+
+Thanks to the quirky nature of both language and diffusion models, the outputs are often nonsensical or unexpectedly delightful. This unpredictability is not a flaw, it is a feature. DreamSprout offers a hands-on sandbox for exploring **how different model architectures and prompt styles influence generative behavior**. It’s a joyful storytelling tool for parents and children, and a modular playground for anyone curious about the expressive boundaries of modern AI.
 
 Version 1.0, November 20, 2025
 
@@ -67,8 +69,7 @@ xformers==0.0.33.post1
 <pre>
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve
-ollama pull mistral
-ollama run mistral
+ollama pull mistral (or whatever models you want)
 </pre>
 
 ---
@@ -106,5 +107,6 @@ _No copyright on this material._
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
 
