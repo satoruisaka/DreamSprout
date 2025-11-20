@@ -105,12 +105,13 @@ Then open [http://localhost:5000](http://localhost:5000) in your browser to:
 
 ## License
 
-_No copyright on this material._
+MIT
 
 ---
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
 
 
