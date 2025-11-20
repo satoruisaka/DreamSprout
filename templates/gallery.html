@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DreamSprout Gallery</title>
+</head>
+<body>
+  <h1>DreamSprout Story Gallery</h1>
+  <ul>
+    {% for run in runs %}
+      <li><a href="{{ run.link }}">{{ run.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <p><a href="/">Create a new story</a></p>
+</body>
+</html>

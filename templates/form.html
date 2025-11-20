@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DreamSprout Story Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+    }
+    #progressBar {
+      margin-top: 2em;
+    }
+    progress {
+      width: 100%;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DreamSprout Story Generator</h1>
+
+  <form id="dreamForm">
+    <label for="dream">Dream Description:</label><br>
+    <textarea name="dream" rows="4" placeholder="Describe your dream..."></textarea><br>
+
+    <label for="elements">Core Elements (comma-separated):</label><br>
+    <input type="text" name="elements" placeholder="e.g. snake, fish, bat"><br>
+
+    <label for="model">Choose a model:</label><br>
+    <select name="model">
+      {% for model in models %}
+        <option value="{{ model }}">{{ model }}</option>
+      {% endfor %}
+    </select><br><br>
+
+
+    <button type="submit">Generate Story</button>
+  </form>
+
+  <div id="progressBar" style="display:none;">
+    <p id="stageText">Starting...</p>
+    <progress id="progress" value="0" max="100"></progress>
+  </div>
+
+  <p><a href="/gallery">View past stories</a></p>
+
+  <script>
+    document.getElementById("dreamForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("progressBar").style.display = "block";
+
+      const formData = new FormData(e.target);
+      fetch("/start", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        const runId = data.run_id;
+        const interval = setInterval(() => {
+          fetch(`/status/${runId}`)
+            .then(res => res.json())
+            .then(status => {
+              document.getElementById("progress").value = status.percent;
+              document.getElementById("stageText").textContent = status.stage;
+              if (status.done) {
+                clearInterval(interval);
+                window.location.href = `/outputs/${runId}/storybook.html`;
+              }
+            });
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
