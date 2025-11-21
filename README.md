@@ -14,7 +14,13 @@ Version 1.0, November 20, 2025
 
 ![Web UI screenshot](DreamSprout_screenshot1.jpg)
 
+---
+
 ![Sample story image](DreamSprout_screenshot2.jpg)
+
+---
+
+![Credits at the end](DreamSprout_screenshot3.jpg)
 
 ---
 
@@ -111,6 +117,7 @@ MIT
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
 
 
