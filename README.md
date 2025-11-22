@@ -58,7 +58,13 @@ DreamSproutStoryGenerator/
     └── storybook_template.html
 </pre>
 
-## Requirements
+## Requirements and setup
+
+Virtual environment is strongly recommended when installing any Python packages.
+<pre>
+python -m venv .venv
+source ./.venv/bin/activate
+</pre>
 
 Install dependencies with:
 
@@ -124,6 +130,7 @@ MIT
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
 
 
