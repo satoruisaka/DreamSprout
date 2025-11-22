@@ -1,10 +1,10 @@
 # DreamSprout Story Generator
 
-**DreamSprout** is a fun, educational Python app that transforms a single prompt into a fully illustrated storybook using local large language models (via Ollama) and image generation (via Stable Diffusion XL).
+**DreamSprout** is a fun, educational Python app that transforms a few words into a fully illustrated storybook using local large language models (via Ollama) and image generation (via Stable Diffusion XL).
 
-It began with a familiar morning moment: waking up and wondering, “What was that dream about?” **DreamSprout** turns those hazy, half-remembered fragments into surreal and unexpectedly delightful stories. 
+It began with a familiar morning moment: waking up and wondering, “What was that dream about?” **DreamSprout** turns those hazy, half-remembered fragments into surreal and unexpectedly delightful stories.
 
-Thanks to the quirky nature of language and diffusion models, the results often veer into nonsense, but that’s part of the charm. This unpredictability is a feature, not a bug. It offers a playful, hands-on way to explore how different model architectures and prompt styles shape generative outputs. It's a joyful storytelling tool for parents and children, and also an educational sandbox for understanding the expressive quirks and interpretive boundaries of modern AI.
+Because of the quirky nature of language and diffusion models, the results are funny and often veer into nonsense. It's fun, not just for children but for AI geeks who wish to test various open weight models and see their different characteristics. It's a storytelling tool AND an educational sandbox for AI enthusiasts.
 
 **Because DreamSprout runs entirely on your local computer, no cloud, no cost, no Internet required, and your privacy is protected.**
 
@@ -68,16 +68,17 @@ pip install -r requirements.txt
 
 **`requirements.txt`**
 ```
-accelerate==1.11.0
+torch==2.9.0
+numpy==2.2.6
 diffusers==0.35.2
-Flask==3.1.2
+transformers==4.57.1
+accelerate==1.12.0
+safetensors==0.7.0
 huggingface-hub==0.36.0
+xformers==0.0.33.post1
+Flask==3.1.2
 Jinja2==3.1.6
 requests==2.32.5
-safetensors==0.6.2
-torch==2.9.0
-transformers==4.57.1
-xformers==0.0.33.post1
 ```
 
 ### Install Ollama and pull your local model
@@ -123,6 +124,7 @@ MIT
 
 ## 🌈 Created with love to inspire imagination and empower storytellers of all ages.
 ```
+
 
 
 
